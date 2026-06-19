@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useMemo, useCallback, createContext, useContext, Fragment } from 'react';
+import { COMPASSES, ADVISOR, TASKS, ANNOUNCEMENTS } from './data.js';
 import { Icon, Avatar, Badge, PriorityPill, Button, Card, SectionTitle, Tabs, Toggle, Modal, Drawer, TextField, Empty, Sparkline, BarChart, DonutChart, ProgressRing, Stat, ImageSlot, FilterBar, ChipToggle, ToastProvider, useToast, vnd } from './ui.jsx';
 import { AppShell, Sidebar, TopBar, SecondaryNav, PageHeader, Page, AIBuddyPopover, mockReply, AI_SUGGESTIONS } from './shell.jsx';
 import { ScreenDworkDashboard } from './dwork.jsx';
@@ -103,7 +104,6 @@ function App() {
 
 // =============== HOME · GLOBAL DASHBOARD (cross-compass overview) ===============
 function ScreenHome({ onNavigate }) {
-  const { COMPASSES, ADVISOR, TASKS, ANNOUNCEMENTS } = window.DSB_DATA;
   const today = TASKS.filter(t => !t.done).slice(0, 4);
   return (
     <>
@@ -189,7 +189,6 @@ function ScreenHome({ onNavigate }) {
 
 // =============== dLink · IPAX — TỰ PHẢN TƯ (self-reflection) ===============
 function ScreenIpax() {
-  const { ADVISOR } = window.DSB_DATA;
   const MOODS = [
     { id: "confident", label: "Tự tin",   icon: "sentiment_satisfied", color: "#00C97D" },
     { id: "thoughtful", label: "Suy ngẫm", icon: "psychology",          color: "#0077ED" },
