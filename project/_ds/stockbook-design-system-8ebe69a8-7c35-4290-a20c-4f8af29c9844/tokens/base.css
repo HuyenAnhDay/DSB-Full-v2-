@@ -1,0 +1,20 @@
+/* Stockbook base — minimal global defaults for any surface using this system. */
+
+body {
+  margin: 0;
+  font: var(--typo-body-md);
+  letter-spacing: var(--track-body-md);
+  font-family: var(--font-sans);
+  color: var(--text-primary);
+  background: var(--surface-page);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button, input, select, textarea {
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: rgba(43, 89, 199, 0.16);
+}

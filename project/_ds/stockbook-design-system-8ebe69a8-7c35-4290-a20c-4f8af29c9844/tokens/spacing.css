@@ -1,0 +1,44 @@
+/* Stockbook spacing & shape — 4px-base spacing, size-named radius scale
+   (from the Figma "Shape" page: Corner radius scale + Spacing). */
+
+:root {
+  /* Spacing (4px base) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* Corner radius scale */
+  --radius-none: 0px;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 28px;
+  --radius-3xl: 32px;
+  --radius-4xl: 48px;
+  --radius-full: 9999px;
+
+  /* Base radius used by most controls (tags, chips) */
+  --radius-base: 6px;
+
+  /* Control heights (buttons, inputs, selects) */
+  --control-h-xs: 24px;
+  --control-h-sm: 28px;
+  --control-h-md: 32px;
+  --control-h-lg: 40px;
+
+  /* Control radius pairs with control height:
+     xs → 4px · sm/md → 8px · lg → 12px */
+  --control-r-xs: 4px;
+  --control-r-sm: 8px;
+  --control-r-md: 8px;
+  --control-r-lg: 12px;
+}

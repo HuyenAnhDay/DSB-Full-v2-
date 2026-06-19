@@ -1,0 +1,163 @@
+/* Stockbook color tokens — curated semantic layer (light theme = product default).
+   Mirrors the Figma variable collections: raw → semantic → role tokens.
+   The full machine-generated set (incl. dark theme) lives in figma/fig-tokens.css. */
+
+:root {
+  /* ── Raw: neutral gray (cool, blue-tinted) ─────────────────── */
+  --gray-50:  rgb(248, 249, 251);
+  --gray-100: rgb(239, 241, 245);
+  --gray-200: rgb(215, 220, 228);
+  --gray-300: rgb(173, 185, 197);
+  --gray-400: rgb(131, 144, 163);
+  --gray-500: rgb(97, 110, 126);
+  --gray-600: rgb(69, 80, 93);
+  --gray-700: rgb(47, 55, 65);
+  --gray-800: rgb(28, 35, 42);
+  --gray-900: rgb(17, 22, 28);
+  --gray-950: rgb(11, 15, 19);
+
+  /* ── Raw: brand orange ──────────────────────────────────────── */
+  --orange-50:  rgb(255, 243, 238);
+  --orange-100: rgb(255, 228, 214);
+  --orange-200: rgb(255, 201, 174);
+  --orange-300: rgb(255, 160, 122);
+  --orange-400: rgb(255, 110, 52);
+  --orange-500: rgb(255, 69, 0);
+  --orange-600: rgb(214, 57, 0);
+  --orange-700: rgb(172, 45, 0);
+
+  /* ── Raw: interactive blue ──────────────────────────────────── */
+  --blue-50:  rgb(238, 242, 252);
+  --blue-100: rgb(216, 229, 248);
+  --blue-200: rgb(176, 200, 242);
+  --blue-300: rgb(124, 163, 232);
+  --blue-400: rgb(74, 122, 216);
+  --blue-500: rgb(43, 89, 199);
+  --blue-600: rgb(28, 63, 158);
+  --blue-700: rgb(18, 43, 114);
+
+  /* ── Raw: semantic hues ─────────────────────────────────────── */
+  --red-50:  rgb(254, 242, 242);
+  --red-100: rgb(254, 226, 226);
+  --red-400: rgb(248, 113, 113);
+  --red-500: rgb(239, 68, 68);
+  --red-600: rgb(220, 38, 38);
+  --red-700: rgb(185, 28, 28);
+
+  --green-50:  rgb(239, 250, 244);
+  --green-300: rgb(110, 221, 167);
+  --green-400: rgb(38, 217, 122);
+  --green-500: rgb(24, 170, 104);
+  --green-600: rgb(16, 132, 82);
+  --green-700: rgb(10, 92, 58);
+
+  --yellow-50:  rgb(255, 251, 235);
+  --yellow-400: rgb(251, 191, 36);
+  --yellow-500: rgb(245, 158, 11);
+  --yellow-600: rgb(217, 119, 6);
+  --yellow-700: rgb(180, 83, 9);
+
+  --sky-50:  rgb(240, 249, 255);
+  --sky-500: rgb(14, 165, 233);
+  --sky-600: rgb(2, 132, 199);
+  --sky-700: rgb(3, 105, 161);
+
+  --lavender-500: rgb(135, 73, 255);
+  --lavender-50:  rgb(245, 240, 255);
+
+  /* ── Neutral alpha ramp (on light surfaces) ─────────────────── */
+  --alpha-50:  rgba(17, 22, 28, 0.02);
+  --alpha-100: rgba(17, 22, 28, 0.0392);
+  --alpha-200: rgba(17, 22, 28, 0.0784);
+  --alpha-300: rgba(17, 22, 28, 0.1216);
+  --alpha-400: rgba(17, 22, 28, 0.2392);
+  --alpha-500: rgba(17, 22, 28, 0.3608);
+  --alpha-600: rgba(17, 22, 28, 0.4784);
+  --alpha-700: rgba(17, 22, 28, 0.6);
+  --alpha-800: rgba(17, 22, 28, 0.7216);
+  --alpha-900: rgba(17, 22, 28, 0.8784);
+  --alpha-950: rgba(0, 6, 15, 0.98);
+
+  /* ── Semantic roles ─────────────────────────────────────────── */
+  /* Text */
+  --text-primary: var(--gray-950);
+  --text-secondary: var(--alpha-800);
+  --text-tertiary: var(--alpha-700);
+  --text-muted: var(--alpha-700);
+  --text-disabled: var(--alpha-400);
+  --text-inverse: rgb(255, 255, 255);
+  --text-on-action: var(--gray-50);
+  --text-brand: var(--orange-500);
+  --text-interactive: var(--blue-500);
+  --text-danger: var(--red-500);
+  --text-danger-strong: var(--red-700);
+  --text-success: var(--green-500);
+  --text-success-strong: var(--green-700);
+  --text-warning: var(--yellow-500);
+  --text-warning-strong: var(--yellow-700);
+  --text-information: var(--sky-500);
+
+  /* Icon */
+  --icon-primary: var(--gray-950);
+  --icon-secondary: var(--alpha-900);
+  --icon-tertiary: var(--alpha-700);
+  --icon-disabled: var(--gray-400);
+  --icon-on-action: var(--gray-50);
+  --icon-interactive: var(--blue-500);
+  --icon-danger: var(--red-500);
+  --icon-success: var(--green-500);
+  --icon-warning: var(--yellow-500);
+
+  /* Surface */
+  --surface-page: rgb(255, 255, 255);
+  --surface-container: rgb(255, 255, 255);
+  --surface-elevated: rgb(255, 255, 255);
+  --surface-muted: var(--gray-100);
+  --surface-subtle: var(--alpha-50);
+  --surface-inverse: var(--gray-900);
+  --surface-overlay: var(--alpha-100);
+  --surface-scrim: rgba(11, 15, 19, 0.48);
+  --surface-brand: var(--orange-500);
+  --surface-brand-subtle: rgba(255, 69, 0, 0.0784);
+  --surface-interactive: var(--blue-500);
+  --surface-interactive-subtle: rgba(43, 89, 199, 0.0784);
+  --surface-danger: var(--red-500);
+  --surface-danger-subtle: rgba(239, 68, 68, 0.0784);
+  --surface-success: var(--green-500);
+  --surface-success-subtle: rgba(24, 170, 104, 0.0784);
+  --surface-warning: var(--yellow-500);
+  --surface-warning-subtle: rgba(245, 158, 11, 0.0784);
+  --surface-information-subtle: rgba(14, 165, 233, 0.0784);
+  --surface-accent-subtle: rgba(135, 73, 255, 0.0784);
+
+  /* Border */
+  --border-default: var(--alpha-300);
+  --border-subtle: var(--alpha-200);
+  --border-strong: var(--alpha-400);
+  --border-disabled: var(--alpha-200);
+  --border-interactive: var(--blue-500);
+  --border-danger: var(--red-500);
+  --border-success: var(--green-500);
+  --border-warning: var(--yellow-500);
+
+  /* Action (buttons & controls) */
+  --action-primary: var(--gray-950);
+  --action-primary-hover: var(--gray-800);
+  --action-primary-pressed: var(--gray-900);
+  --action-danger: var(--red-500);
+  --action-danger-hover: var(--red-600);
+  --action-danger-pressed: var(--red-700);
+  --action-interactive: var(--blue-500);
+  --action-interactive-hover: var(--blue-400);
+  --action-interactive-pressed: var(--blue-600);
+  --action-disabled: var(--gray-300);
+  --action-subtle-hover: var(--alpha-100);
+  --action-subtle-pressed: var(--alpha-200);
+
+  /* Market data (finance semantics) */
+  --market-up: var(--green-500);
+  --market-up-strong: var(--green-600);
+  --market-down: var(--red-500);
+  --market-flat: var(--gray-500);
+  --market-reference: var(--yellow-500);
+}

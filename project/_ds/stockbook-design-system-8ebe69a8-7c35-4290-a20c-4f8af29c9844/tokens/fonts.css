@@ -1,0 +1,11 @@
+/* Stockbook — webfonts.
+   The Figma file uses Geist (UI), Geist Mono (numerics/code).
+   No font binaries were provided, so we load the same families from Google Fonts.
+   Open Sans + Inter appear only in spec-sheet chrome inside Figma, not in product UI. */
+
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --font-sans: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}

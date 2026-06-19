@@ -1,0 +1,10 @@
+/* Stockbook Design System — global CSS entry point.
+   Import order: raw Figma variables first, curated semantic layers override after. */
+
+@import './figma/fig-tokens.css';
+@import './tokens/fonts.css';
+@import './tokens/colors.css';
+@import './tokens/typography.css';
+@import './tokens/spacing.css';
+@import './tokens/elevation.css';
+@import './tokens/base.css';

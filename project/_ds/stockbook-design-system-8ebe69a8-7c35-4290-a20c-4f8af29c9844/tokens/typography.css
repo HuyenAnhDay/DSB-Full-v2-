@@ -1,0 +1,88 @@
+/* Stockbook typography — Geist type ramp from the Figma "Typography" spec.
+   5 roles × 3 sizes, each with a Regular and an Emphasized cut.
+   Format: size/line-height · weight · letter-spacing. */
+
+:root {
+  /* Display — hero numerals & marketing moments */
+  --typo-dis-lg: 400 57px/64px var(--font-sans); /* @kind font */
+  --typo-dis-md: 400 45px/52px var(--font-sans); /* @kind font */
+  --typo-dis-sm: 400 36px/44px var(--font-sans); /* @kind font */
+
+  /* Headline — page & section titles */
+  --typo-head-lg: 400 32px/40px var(--font-sans); /* @kind font */
+  --typo-head-md: 400 28px/36px var(--font-sans); /* @kind font */
+  --typo-head-sm: 400 24px/32px var(--font-sans); /* @kind font */
+
+  /* Title — card titles, list headers */
+  --typo-title-lg: 500 22px/28px var(--font-sans); /* @kind font */
+  --typo-title-md: 500 16px/24px var(--font-sans); /* @kind font */
+  --typo-title-sm: 500 14px/20px var(--font-sans); /* @kind font */
+
+  /* Label — buttons, tags, table headers */
+  --typo-label-lg: 500 14px/20px var(--font-sans); /* @kind font */
+  --typo-label-md: 500 12px/16px var(--font-sans); /* @kind font */
+  --typo-label-sm: 500 11px/16px var(--font-sans); /* @kind font */
+
+  /* Body — copy */
+  --typo-body-lg: 400 16px/24px var(--font-sans); /* @kind font */
+  --typo-body-md: 400 14px/20px var(--font-sans); /* @kind font */
+  --typo-body-sm: 400 12px/16px var(--font-sans); /* @kind font */
+
+  /* Letter-spacing per role/size */
+  --track-title-md: 0.15px; /* @kind other */
+  --track-title-sm: 0.1px; /* @kind other */
+  --track-label: 0.5px; /* @kind other */
+  --track-body-lg: 0.5px; /* @kind other */
+  --track-body-md: 0.25px; /* @kind other */
+  --track-body-sm: 0.4px; /* @kind other */
+
+  /* Emphasized weights: display/headline/title/label → 600, body → 500 */
+  --weight-regular: 400; /* @kind other */
+  --weight-medium: 500; /* @kind other */
+  --weight-emphasis: 600; /* @kind other */
+}
+
+/* Utility classes — one per ramp step (suffix -em = emphasized) */
+.typo-dis-lg { font: var(--typo-dis-lg); letter-spacing: -0.25px; }
+.typo-dis-md { font: var(--typo-dis-md); }
+.typo-dis-sm { font: var(--typo-dis-sm); }
+.typo-dis-lg-em, .typo-dis-md-em, .typo-dis-sm-em { font-weight: 600; }
+.typo-dis-lg-em { font: var(--typo-dis-lg); font-weight: 600; letter-spacing: -0.25px; }
+.typo-dis-md-em { font: var(--typo-dis-md); font-weight: 600; }
+.typo-dis-sm-em { font: var(--typo-dis-sm); font-weight: 600; }
+
+.typo-head-lg { font: var(--typo-head-lg); }
+.typo-head-md { font: var(--typo-head-md); }
+.typo-head-sm { font: var(--typo-head-sm); }
+.typo-head-lg-em { font: var(--typo-head-lg); font-weight: 600; }
+.typo-head-md-em { font: var(--typo-head-md); font-weight: 600; }
+.typo-head-sm-em { font: var(--typo-head-sm); font-weight: 600; }
+
+.typo-title-lg { font: var(--typo-title-lg); }
+.typo-title-md { font: var(--typo-title-md); letter-spacing: var(--track-title-md); }
+.typo-title-sm { font: var(--typo-title-sm); letter-spacing: var(--track-title-sm); }
+.typo-title-lg-em { font: var(--typo-title-lg); font-weight: 600; }
+.typo-title-md-em { font: var(--typo-title-md); font-weight: 600; letter-spacing: var(--track-title-md); }
+.typo-title-sm-em { font: var(--typo-title-sm); font-weight: 600; letter-spacing: var(--track-title-sm); }
+
+.typo-label-lg { font: var(--typo-label-lg); letter-spacing: var(--track-label); }
+.typo-label-md { font: var(--typo-label-md); letter-spacing: var(--track-label); }
+.typo-label-sm { font: var(--typo-label-sm); letter-spacing: var(--track-label); }
+.typo-label-lg-em { font: var(--typo-label-lg); font-weight: 600; letter-spacing: var(--track-label); }
+.typo-label-md-em { font: var(--typo-label-md); font-weight: 600; letter-spacing: var(--track-label); }
+.typo-label-sm-em { font: var(--typo-label-sm); font-weight: 600; letter-spacing: var(--track-label); }
+
+.typo-body-lg { font: var(--typo-body-lg); letter-spacing: var(--track-body-lg); }
+.typo-body-md { font: var(--typo-body-md); letter-spacing: var(--track-body-md); }
+.typo-body-sm { font: var(--typo-body-sm); letter-spacing: var(--track-body-sm); }
+.typo-body-lg-em { font: var(--typo-body-lg); font-weight: 500; letter-spacing: var(--track-body-lg); }
+.typo-body-md-em { font: var(--typo-body-md); font-weight: 500; letter-spacing: var(--track-body-md); }
+.typo-body-sm-em { font: var(--typo-body-sm); font-weight: 500; letter-spacing: var(--track-body-sm); }
+
+/* Numerals: market data always uses tabular figures, often Geist Mono */
+.typo-num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0;
+}
+.tabular { font-variant-numeric: tabular-nums; }
